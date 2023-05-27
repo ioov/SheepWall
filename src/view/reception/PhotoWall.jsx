@@ -7,14 +7,14 @@ const Img = () => {
         let nStr = 'SK' + i.toString().padStart(4, '0') + '.jpg';
         list.push(nStr)
     }
-    function getImageUrl(name) {
-        return new URL(`/src/assets/photo/${name}`, import.meta.url).href
+    const fileSrc = (filename) =>  {    //引入文件
+        return new URL(`/src/assets/photo/${filename}`, import.meta.url).href
     }
 
     const listItems = list.map((item, index) =>
         <Image key={index}
             alt="SHEEP"
-            src={getImageUrl(item)}
+            src={fileSrc(item)}
         />
 
     )

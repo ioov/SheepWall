@@ -1,17 +1,47 @@
-
-.About{
+.About {
     width: 50%;
     margin: auto;
-    height: 60vh;
-    .introduce{
+    height: 100%;
 
-        div{
-            text-indent:30px;
+    .introduce {
+
+        div {
+
+            text-indent: 30px;
             margin: 15px 0;
             line-height: 28px;
         }
     }
-    a{
+
+    a {
+        @include font-color('border-color')
+    }
+    .Specification{
+        line-height: 28px;
+        li{
+            margin: 10px 0 10px 45px;
+            list-style:unset !important;
+
+        }
+        
+    }
+    .ContactUs ,ul{
+        margin: 15px 0;
+        li {
+
+            text-indent: 30px;
+            line-height: 28px;
+        }
+    }
+    p{
+        margin: 15px 0;
+        text-indent: 30px;
+        cursor: pointer;
         @include font-color('border-color')
     }
 }
+@media screen and (max-width: 1024px){
+    .About {
+        width: 70%;
+    }
+  }

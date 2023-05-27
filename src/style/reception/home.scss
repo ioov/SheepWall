@@ -3,9 +3,9 @@
     overflow: unset !important;
 
     :where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-group-square-shadow {
-        width: 80px;
-        background-color: unset;
-        box-shadow: unset;
+        width: 80px !important;
+        background-color: unset !important;
+        box-shadow: unset !important;
     }
 
 

@@ -14,6 +14,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     }
   },
+  build: {
+		minify: "terser", // 必须开启：使用terserOptions才有效果
+		chunkSizeWarningLimit:1500,
+		terserOptions: {
+			compress: {
+				//生产环境时移除console
+				drop_console: true,
+				drop_debugger: true,
+			},
+		},
+	},
   css: {
      /* CSS 预处理器 */
     preprocessorOptions: {

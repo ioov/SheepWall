@@ -155,10 +155,12 @@ const Home = () => {
             number.textContent = (i) + 1;
             element.appendChild(number);
 
-            
+            const fileSrc = (filename) =>  {    //引入文件
+                return new URL(filename, import.meta.url).href
+            }
             const img = document.createElement('img');
             img.className = 'img';
-            img.src = ImgInfo[i].src;
+            img.src = fileSrc(ImgInfo[i].src);
             element.appendChild(img);
 
 

@@ -8,11 +8,13 @@ const Bvideo = () => {
     let list = [];
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    for (let i = 0; i < 29; i++) {
-        let nStr = '/src/assets/video/' + 'SK' + i.toString().padStart(4, '0') + '.mp4';
+    for (let i = 0; i < 30; i++) {
+        let nStr = 'SK' + i.toString().padStart(4, '0') + '.mp4';
         list.push(nStr)
     }
-
+    const fileSrc = (filename) =>  {    //引入文件
+        return new URL(`/src/assets/video/${filename}`, import.meta.url).href
+    }
     let html = list.map((itme, index) => {
 
         return (
@@ -21,7 +23,7 @@ const Bvideo = () => {
                 showModal(itme);
             }} 
             onContextMenu={()=> false}
-            key={index} src={itme} className='video'></video>
+            key={index} src={fileSrc(itme)} className='video'></video>
         </div>
         )
     })
