@@ -1,0 +1,17 @@
+
+.About{
+    width: 50%;
+    margin: auto;
+    height: 60vh;
+    .introduce{
+
+        div{
+            text-indent:30px;
+            margin: 15px 0;
+            line-height: 28px;
+        }
+    }
+    a{
+        @include font-color('border-color')
+    }
+}

@@ -1,0 +1,82 @@
+/* 字体定义规范 */
+$font-size-xs:10px;
+$font-size-sm:12px;
+$font-size-md:14px;
+$font-size-lg:16px;
+$font-size-xl:18px;
+
+// 边框定义大小
+$border-xs:0.5px;
+$border-sm:1px;
+$border-md:1.5px;
+$border-lg:2px;
+$border-xl:3px;
+$border-xxl:5px;
+
+// 边缘阴影大小
+$box-shadow-bottom: 0px 8px 8px 0;
+$box-shadow-top: 0px -8px 8px 0;
+$box-shadow-BackTop: rgba(255, 255, 255, 0.8) 0px 1px 2px 0px, rgba(177, 181, 184, 0.5) 0px 2px 6px 2px;
+
+// 固定色
+$color-fff: #fff;
+$bg-purple: #d3adf7;
+
+// // .light   浅色主题
+// $light-scrollbar: #bd57cf;
+// $background-color-light: #CE93D8;
+// $text-color-light: #EEEEEE;
+// $light-bg-color: #CE93D8;
+
+
+
+// // .dark    深色主题
+// $dark-scrollbar: #554e4e;
+// $background-color-dark: #424242;
+$text-color-dark: #757575;
+// $dark-bg-color: #1a1a1a;
+
+
+// 浅色变量集合
+
+
+$light : (
+
+
+  
+base-color: #181d35, //背景色
+  text-color:#000, //字体颜色
+  menu-bg:rgba(255,255,255,0.8),
+  main-bg:#ffffffb0,
+  color-Selected:#00BCD4,
+  ok-bg:#4A0561,
+  scrollbar:#BE6DF8,
+  Photo-frame:#fff,           //相框色
+  box-shadow: rgba(0,0,0,0.08),
+  border-color:#BE6DF8,
+  scrollbar-track:#ccccccd3,
+  selection:#BE6DF8,    //选中字体颜色
+);
+
+
+//深色变量集合
+$dark : (
+  base-color: #fff, //背景色
+  text-color:#938f8f, //字体颜色
+  menu-bg:rgba(35 ,35 ,35,0.95),
+  main-bg:#27272b,
+  color-Selected:#B2EBF2,
+  ok-bg:#F1CEFD,
+  scrollbar:#554e4e79,
+  Photo-frame:#EACCFF,           //相框色
+  box-shadow: rgba(255,255,255,0.08),
+  border-color:#7509C3,
+  scrollbar-track:#2e2e33,
+  selection:#4f0286db,    //选中字体颜色
+);
+
+
+$themes: (
+  light: $light,
+
+  dark: $dark )

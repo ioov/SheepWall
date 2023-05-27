@@ -1,0 +1,57 @@
+
+%public-css{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+
+    .ant-image {
+        margin: 10px;
+
+    }
+    .ant-image-img {
+        object-fit: cover;
+        border-radius: 8px;
+        // @include border($border-sm,'#ccc');
+        // @include background-color('Photo-frame');
+    }
+}
+.photowall {
+    @extend   %public-css;
+    .ant-image-img {
+       width: 328px;
+       height: 500px;
+    }
+}
+:where(.css-dev-only-do-not-override-ed5zg0) .ant-image-preview-operations-progress{
+    user-select:none;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-image .ant-image-mask{     //hover 查看蒙层圆角
+    border-radius: 8px;
+}
+@media screen and (max-width: 1024px){
+    :where(.css-dev-only-do-not-override-ed5zg0) .ant-image-preview-operations-progress{
+        z-index: -1;
+        margin-top: -22px;
+        user-select:none;
+    }
+    :where(.css-dev-only-do-not-override-ed5zg0) .ant-image-preview-operations-icon{
+        font-size: 14px;
+    }
+    :where(.css-dev-only-do-not-override-ed5zg0) .ant-image-preview-operations{
+        height: 60px;
+        background: rgb(0 0 0 / 28%);
+    }
+    :where(.css-dev-only-do-not-override-ed5zg0) .ant-image-preview-operations-operation{
+        margin-top: 10px;
+    }
+    .photowall {
+        @extend   %public-css;
+        .ant-image-img {
+           width: 128px;
+           height:200px;
+        }
+    }
+}

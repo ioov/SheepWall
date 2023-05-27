@@ -1,0 +1,154 @@
+// @import "@/style/theme/mixins.scss";
+.header {
+    // height: 100px;
+    @include background-color('menu-bg');
+    @include box-show('box-shadow', $box-shadow-bottom);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    & a,
+    div {
+        @include font-color("text-color");
+    }
+    
+    .Mobile,
+    .Computer {
+        height: 100px;
+        user-select: none;
+        width: 80vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >div{
+            height: 100%;
+           *{
+            cursor: pointer;
+           }
+        }
+        .active {
+            @include font-color('base-color');
+            @include border('bottom', $border-xxl, 'border-color');
+        }
+
+    }
+
+    .Mobile {
+        height: 60px;
+        line-height: 60px;
+        display: none;
+        div:nth-child(1){
+            display: flex;
+                        @include font-size($font-size-xl);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .Computer {
+        // height: 10vh;
+        // line-height: 10vh;
+
+        div:nth-child(1) {
+            @include font-size($font-size-xl);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+                text-indent: 10px;
+            }
+        }
+        div:nth-child(2) {
+            width: 45%;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            text-align: center;
+            .link{
+                flex-basis: 80px;
+            }
+            a{
+                height: 100%;
+                text-align: center;
+                line-height: 100px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .Computer {
+            display: none;
+        }
+
+        .Mobile {
+            display: flex;
+        }
+    }
+
+}
+
+
+
+// 抽屉宽度
+.ant-drawer-content-wrapper {
+    width: 228px;
+}
+
+// 菜单字体大小
+:where(.css-dev-only-do-not-override-ed5zg0)[class^="ant-drawer"],
+:where(.css-dev-only-do-not-override-ed5zg0)[class*=" ant-drawer"] {
+    font-size: unset;
+}
+
+// 菜单头部
+.ant-drawer-header {
+    z-index: 99;
+    a ,
+    .ant-drawer-close,
+    .ant-drawer-title {
+        @include font-color('text-color');
+    }
+    @include background-color('menu-bg');
+    @include box-show('box-shadow', $box-shadow-bottom);
+    // 抽屉右侧菜单相关
+    .ant-drawer-extra {
+        //右上角操作区按钮间距
+        span {
+            margin-right: 15px;
+        }
+    }
+}
+
+// 菜单身体
+.ant-drawer-body {
+    @include background-color("main-bg");
+
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-drawer .ant-drawer-body {
+    padding: 15px;
+}
+
+.ant-drawer-body {
+    li {
+
+        a {
+            width: 100%;
+            height: 38px;
+            line-height: 38px;
+            display: block;
+            letter-spacing: 4px;
+            text-indent: 45px;
+            @include font-color('text-color');
+        }
+
+        .active {
+            @include font-color('base-color');
+            @include background-color('border-color');
+            border-radius: 3px;
+        }
+    }
+}

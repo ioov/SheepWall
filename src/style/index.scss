@@ -1,0 +1,95 @@
+// @import './theme/index.scss';
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,
+legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,
+details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin: 0;
+    padding: 0;
+}
+// body { overflow-y: scroll;position: relative; }
+// body{
+//   position: inherit!important;
+//   // width: auto!important;
+//   // overflow: revert!important;
+// }
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  body {
+    width: 100vw;
+    // overflow: hidden;
+    padding-right: calc(100vw - 100%);
+    overflow: revert!important;
+  }
+main{
+    .section{
+        width: 80vw;
+        margin: auto;
+        height: 100%;
+        padding: 5% 0;
+    }
+    @include background-color("main-bg");
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.BackTop{
+    color: red;
+}
+
+@media screen and (max-width: 1024px){
+    main{
+         .section{
+             width: 95%;
+             margin: auto;
+             height: 100%;
+             padding: 5% 0;
+         }
+     }
+}
+
+// 返回顶部按钮相关
+:where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-default .ant-float-btn-body{
+    @include background-color('menu-bg');
+    @include box-show(null,$box-shadow-BackTop);
+}
+:where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-default .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon{
+    @include font-color("text-color");
+}
+/*全局滚动条样式*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 14px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    @include background-color('scrollbar');
+  }
+  ::-webkit-scrollbar-track{
+    @include background-color('scrollbar-track');
+  }
+  // .modalbox{
+  //   &::-webkit-scrollbar-thumb{
+  //       background-color: red;
+  //   }
+  // }
+  @media screen and (max-width: 1024px){
+    ::-webkit-scrollbar {
+        width: 2px;
+        height: 14px;
+      }
+  }
+
+  /*全局滚动条样式结束*/
+
+
+  // 全局字体选中颜色
+  ::selection {
+    // @include font-color("text-color");
+    @include background-color("selection");
+}

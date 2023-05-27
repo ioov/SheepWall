@@ -1,0 +1,57 @@
+
+
+.VideoWallbox{
+    display: flex;
+    justify-content: center;
+}
+.VideoWallp{
+        font-size: 20px;
+        line-height: 20px;  
+}
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-content{
+    padding:0;
+}
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-close{
+    top: 5px;
+    right: 8px;
+}
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-header{
+    padding: 5px 0 5px 5px;
+    margin: 0;
+}
+.ant-modal-close-x{
+    color: $color-fff;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.videoContainer{
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+        width: 100%;
+        .item {
+            // width: 100%;
+            // height: 100%;
+            padding: 10px;
+            float: left;
+            
+        }
+        .item video{
+            width: 350px;
+            border-radius: 10px;
+        }
+}
+ //所有控件
+ video::-webkit-media-controls-enclosure{ 
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .videoContainer .item video{
+        width: 128px;
+    }
+}

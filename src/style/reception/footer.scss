@@ -1,0 +1,17 @@
+.footer{
+    // position: sticky;
+    bottom:  0;
+    z-index: 90;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include box-show('box-shadow',$box-shadow-top);
+    @include background-color("menu-bg");
+    & a,div{@include font-color("text-color");}
+    >div{
+        line-height: 1.5;
+    }
+
+}

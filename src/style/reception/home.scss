@@ -1,0 +1,113 @@
+.home {
+    height: 80vh;
+    overflow: unset !important;
+
+    :where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-group-square-shadow {
+        width: 80px;
+        background-color: unset;
+        box-shadow: unset;
+    }
+
+
+
+#container {
+    height: 80vh;
+
+    %three {
+        overflow: unset !important;
+        width: unset !important;
+        height: 50vh !important;
+        touch-action: none !important;
+        padding-right: 10%;
+    }
+
+    >div {
+        @extend %three;
+        height: 80vh !important;
+
+        >div {
+            @extend %three;
+            height: 80vh !important;
+            display: flex;
+
+            >div {
+                @extend %three;
+                height: 900px !important;
+
+
+            }
+        }
+    }
+
+}
+}
+
+#menu {
+
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    button {
+        cursor: pointer;
+        padding: 5px 0;
+        width: 80px;
+        margin: 10px auto;
+        border: none;
+        @include background-color("main-bg");
+        @include font-color("text-color");
+        @include box-show(null, $box-shadow-BackTop);
+
+    }
+
+    button:hover {
+        @include font-color("base-color");
+        @include background-color("border-color");
+    }
+
+    button:active {
+        color: #000000;
+        @include background-color("border-color");
+    }
+}
+
+.element {
+    width: 120px;
+    height: 160px;
+    font-family: Helvetica, sans-serif;
+    cursor: default;
+    @include background-color("main-bg");
+    @include font-color("text-color");
+    @include box-show(null, $box-shadow-BackTop);
+
+    img {
+        width: 120px;
+        height: 160px;
+        object-fit: cover;
+    }
+
+}
+
+.element:hover {
+    box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.75);
+    @include border(null, $border-sm, 'border-color');
+}
+
+.element .number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    :where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-group-square-shadow {
+        right: 14px;
+        bottom: 50px;
+    }
+
+    #menu button {
+        margin: 3px auto;
+    }
+}
