@@ -93,10 +93,10 @@ const Header = () => {
                     </Space>
                 }
             >
-                <li>    <NavLink to='/'           >🏠首页</NavLink></li>
-                <li>    <NavLink to='/photowall'   >📷照片墙</NavLink></li>
-                <li>    <NavLink to='/videowall'   >📽️视频墙</NavLink></li>
-                <li>    <NavLink to='/about'       >👻关于</NavLink></li>
+                <li onClick={()=>setOpen(false)}>    <NavLink to='/'             >🏠首页</NavLink></li>
+                <li onClick={()=>setOpen(false)}>    <NavLink to='/photowall'   >📷照片墙</NavLink></li>
+                <li onClick={()=>setOpen(false)}>    <NavLink to='/videowall'   >📽️视频墙</NavLink></li>
+                <li onClick={()=>setOpen(false)}>    <NavLink to='/about'       >👻关于</NavLink></li>
 
             </Drawer>
         </nav >

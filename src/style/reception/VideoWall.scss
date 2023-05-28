@@ -8,8 +8,11 @@
         font-size: 20px;
         line-height: 20px;  
 }
-:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-content{
-    padding:0;
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-content,
+:where(.css-ed5zg0).ant-modal .ant-modal-content
+{
+    padding:0 !important;
 }
 :where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-close{
     top: 5px;

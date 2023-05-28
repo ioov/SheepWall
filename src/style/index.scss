@@ -53,11 +53,14 @@ a{
 }
 
 // 返回顶部按钮相关
-:where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-default .ant-float-btn-body{
+:where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-default .ant-float-btn-body,
+:where(.css-ed5zg0).ant-float-btn-default .ant-float-btn-body
+{
     @include background-color('menu-bg');
     @include box-show(null,$box-shadow-BackTop);
 }
-:where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-default .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon{
+:where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-default .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon,
+:where(.css-ed5zg0).ant-float-btn-default .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon{
     @include font-color("text-color");
 }
 /*全局滚动条样式*/
@@ -92,4 +95,7 @@ a{
   ::selection {
     // @include font-color("text-color");
     @include background-color("selection");
+    a:link {
+        @include background-color('base-color');
+    }
 }

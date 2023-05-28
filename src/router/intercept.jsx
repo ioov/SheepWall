@@ -15,7 +15,7 @@ const rotuerViews = (
 					<Route
 						path={item.path}
 						element={
-							<PrivateRoute auth={item.meta.auth} key={item.path}>
+							<PrivateRoute item={item} meta = {item.meta} auth={item.meta.auth} key={item.path}>
 								{<item.element />}
 							</PrivateRoute>
 						}

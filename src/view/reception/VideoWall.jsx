@@ -101,7 +101,7 @@ const Bvideo = () => {
     }
     const main = () => new Player(config)
     const showModal = async (itme) => {
-        config.url = await itme
+        config.url = await fileSrc(itme)
         await setIsModalOpen(true);
         setTimeout(async () => {
             await main();
@@ -165,7 +165,13 @@ const Bvideo = () => {
             //     // video[i].live('contextmenu',function() { return false; })
                 
             // }
-        },1000)
+        },1200)
+        // useEffect(() => {
+        //     if (document.readyState === 'complete') {
+        //         WaterfallFlow()
+        //     }
+        //   }, []);
+        
     return (
         <>
             <div id='videoContainer' className='videoContainer'>

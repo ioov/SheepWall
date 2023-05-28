@@ -2,7 +2,8 @@
     height: 80vh;
     overflow: unset !important;
 
-    :where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-group-square-shadow {
+    :where(.css-dev-only-do-not-override-ed5zg0).ant-float-btn-group-square-shadow,
+    :where(.css-ed5zg0).ant-float-btn-group-square-shadow {
         width: 80px !important;
         background-color: unset !important;
         box-shadow: unset !important;
@@ -10,36 +11,36 @@
 
 
 
-#container {
-    height: 80vh;
+    #container {
+        height: 80vh;
 
-    %three {
-        overflow: unset !important;
-        width: unset !important;
-        height: 50vh !important;
-        touch-action: none !important;
-        padding-right: 10%;
-    }
-
-    >div {
-        @extend %three;
-        height: 80vh !important;
+        %three {
+            overflow: unset !important;
+            width: unset !important;
+            height: 50vh !important;
+            touch-action: none !important;
+            padding-right: 10%;
+        }
 
         >div {
             @extend %three;
             height: 80vh !important;
-            display: flex;
 
             >div {
                 @extend %three;
-                height: 900px !important;
+                height: 80vh !important;
+                display: flex;
+
+                >div {
+                    @extend %three;
+                    height: 900px !important;
 
 
+                }
             }
         }
-    }
 
-}
+    }
 }
 
 #menu {
